@@ -1,0 +1,66 @@
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,dd,dl{padding:0;margin:0;}
+li{list-style:none}
+img{border:none}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+
+body{
+	background: url('../img/sgs/bg.png')no-repeat;
+	background-size: 100%;
+}
+
+#box{
+	width: 1200px;
+	margin: 0 auto;
+	
+
+}
+#box ul{
+	display: flex;
+	margin-top: 100px;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+#box ul li{
+	width: 250px;
+	overflow: hidden;
+	transition: all 0.5s;
+	border-radius: 4px;
+}
+#box ul li:hover{	
+	transform: translate(0, -30px);
+}
+#box ul li p{	
+	text-align: center;
+	line-height: 32px;
+	color: #fff;
+}
+#box ul li div{
+	height: 32px;
+	box-sizing: border-box;
+	width: 250px;
+}
+#box ul li:nth-of-type(1) div{
+	background: #ff002f80;
+}
+#box ul li:nth-of-type(2) div{
+	background: #0000ff7a;
+}
+#box ul li:nth-of-type(3) div{
+	background: #00ff086e;
+}
+#box ul li:nth-of-type(4) div{
+	background: #80808073;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三国杀皮肤台词查询</title>
+	<link rel="stylesheet" type="text/css" href="./css/sgs.css">
+	<script type="text/javascript" src="./js/vue.js"></script>
+	
+
+	
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li v-for="item in country">
+				<div><p>{{item.country}}</p></div>
+				<a href="./sgsInfo.html"><img v-bind:src="item.img"></a>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="./js/sgs.js"></script>
+	
+</body>
+</html>

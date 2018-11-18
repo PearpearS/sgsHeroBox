@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三国杀皮肤台词查询</title>
+	<link rel="stylesheet" type="text/css" href="./css/hero.css">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="./js/vue.js"></script>
+</head>
+<body>
+	<div class="Introduction">
+		<h2>三国杀武将资料库</h2>
+		<p>查看武将资料，武将台词录音，武将皮肤等等...</p>
+		<p>更多武将，后续都会更新...</p>
+	</div>
+	<div id="heroBox">	
+		<audio id="myPlay"></audio>
+		<div class="menu">
+			<ul>
+				<li v-for="item,b in menu" v-on:mouseover="show(b)">{{item.country}}</li>
+			</ul>
+		</div>
+
+		<div class="skin">
+			<ul class="skinUl">
+				<li v-for="item,a in menu" 
+				v-bind:style="{ display : a=== count? 'block':'none'}"
+				>	
+					<img v-for="heros,index in item.img" 
+						 v-bind:src="heros"
+						 v-on:click="showHero(heros,item.life[index],item.trait[index],item.skill[index],item.skill2[index],item.skillInfo[index],item.skillInfo2[index],item.sound[index],item.sound2[index]
+						 ,item.skin[index])">
+						
+			</ul>
+		</div>
+
+		<div class="info" v-show="infoShow">
+			<input type="button" value="关闭" class="close" v-on:click="close" style="height: 200px;">
+			<div class="left">
+				<img v-bind:src="newImg" >
+			</div>
+
+			<div class="right">
+				<div class="mes">
+					<h2>武将生平</h2>
+					<p>{{newLife}}</p>
+					<h2 style="padding-top: 20px;">武将特点</h2>
+					<p>{{newtrait}}</p>
+				</div>
+				<div class="hero-bottom">
+					<span style="font-size: 12px;color: #00a1ff;">点击收听武将台词</span><button class="play1" v-on:click="playSound">{{skill}}<i class="fa fa-play"></i></button>
+					<button class="play1" v-on:click="playSound2">{{skill2}}<i class="fa fa-play"></i></button>
+					<div class="mes2">
+						<p v-show="skillInfoFlag">{{aaa}}</p>
+						<p v-show="skillInfo2Flag">{{bbb}}</p>
+					</div>
+				</div>
+
+				<div class="otherSkin">
+					<ul>
+						<li v-for="skins in otherSkin">
+							<img v-bind:src="skins"
+								 v-on:click="changeSkin(skins)"
+							>
+						</li>						
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	</div>
+
+	
+
+
+	<script type="text/javascript" src="./js/hero.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			let showBox=document.getElementById('heroBox');
+			showBox.style.opacity='1';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,dd,dl{padding:0;margin:0;}
+li{list-style:none;}
+img{border:none;margin:0;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+
+body{
+	background: url('../img/sgs/bg.png')no-repeat;
+	background-size: 100%;
+	/* background: rgba(0, 0, 0, 0.9); */
+}
+#heroBox{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 100px;
+	opacity: 0;
+	transition: all 3s;
+}
+
+
+#heroBox .menu ul li{
+	box-sizing: border-box;
+	width: 50px;
+	height: 150px;
+	line-height: 150px;
+	color: #fff;
+	text-align: center;
+	border-bottom:1px solid #5f4d37;
+	transition: all 0.35s;
+}
+
+#heroBox .skin{
+	width:1150px;
+	box-sizing: border-box;
+	height: 600px;
+	margin-left: -2px;
+	background: url('../img/sgs/heroBg.png');
+	background-size: 100% ;
+}
+#heroBox .skin .skinUl{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#heroBox .skin .skinUl li{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+#heroBox .skin .skinUl li img{
+	width: 100%;
+	width: 100px;
+	height: 150px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.info{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -450px;
+	margin-top: -250px;
+	z-index: 99;
+	width:900px;
+	height: 500px;
+	background:#bdbbbb;
+	display: flex;
+
+}
+.close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100px;
+	font-size: 20px;
+}
+.info .left img{
+	width: 350px;
+	height: 500px;
+}
+.play1{
+	width: 100px;
+	height: 25px;
+	border-radius: 6px;
+	outline: none;
+	margin-left: 20px;
+}
+.play1 i{
+	margin-left: 10px;
+}
+.right .mes{
+	padding: 20px;
+}
+.right .hero-bottom{
+	padding: 20px;
+}
+.right .hero-bottom .mes2{
+	padding-top: 20px;
+}
+.menu ul{
+	background: linear-gradient(#6a5944,#bab8b5,#5a422d,#2e2114);
+	background: -moz-linear-gradient(#6a5944,#bab8b5,#5a422d,#2e2114);
+}
+.menu ul li:hover{
+	background: #9FC8D2;
+}
+.otherSkin ul  {
+	position: absolute;
+	bottom: 0;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	display: flex;
+}
+.otherSkin ul li{
+	width: 100px;
+	height: 130px;
+	overflow: hidden;
+	margin-left: 10px;
+
+}
+.otherSkin ul li img{
+	width: 100%;
+	cursor: pointer;
+	height: 100%;
+}
+.Introduction{
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #fff;
+}
+
+
